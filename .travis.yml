@@ -8,17 +8,15 @@ before_install:
 script:
     - docker run moath/docker-react npm run test -- --coverage
 
-deploy: # All this information are from aws
-    provider: elasticbeanstalk # Elastic Beanstalk
-    region: "us-east-2" # http://dockerreact-env.wqwhhaijbu.us-east-2.elasticbeanstalk.com/
-    app: "docker-react" # the application name 
-    env: "DockerReact-env" # the environment name
-    bucket_name: "elasticbeanstalk-us-east-2-564950470946" # S3
-    bucket_path: "docker-react"
-    on: # deploy on any updates on the master branch
-        branch: master
-    access_key_id: $AWS_ACCESS_KEY # From Travis-CI Environment Variables
-    secret_access_key: 
-        secure: "$AWS_SECRET_KEY"
-
-
+#deploy: # All this information are from aws
+#    provider: elasticbeanstalk # Elastic Beanstalk
+#    region: "us-east-2" # http://dockerreact-env.wqwhhaijbu.us-east-2.elasticbeanstalk.com/
+#    app: "docker-react" # the application name 
+#    env: "DockerReact-env" # the environment name
+#    bucket_name: "elasticbeanstalk-us-east-2-564950470946" # S3
+#    bucket_path: "docker-react"
+#    on: # deploy on any updates on the master branch
+#        branch: master
+#    access_key_id: $AWS_ACCESS_KEY # From Travis-CI Environment Variables
+#    secret_access_key: 
+#        secure: "$AWS_SECRET_KEY"
